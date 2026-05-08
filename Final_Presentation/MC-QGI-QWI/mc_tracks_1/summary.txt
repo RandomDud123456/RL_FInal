@@ -1,0 +1,19 @@
+benchmark_mc_tracks.py
+K=5 N=5 gamma=0.9 steps=40000 log_every=250 seed=42
+mc_budgets=[1] mc_episode_len=50 smooth_window=1 paper_seeds=1
+
+Figures: 01–02 (trios) | 03 runtime | 04 dashboard | 05 regret | 06 Bellman | 07 cumulative | 08 smoothed-step reward + regret | 09 episodic reward + regret (paper-style) | individual/* | metrics_comparison.csv
+Grid mode: also 10–13_grid_* at --save_dir from K*_N*_B* subfolders.
+
+Gittins truth (active-only VI): [2.     1.927  1.8766 1.8399 1.8119]
+Whittle restless: [2.     1.7565 1.7554 1.7588 1.7685]
+
+--- Rested track (target Gittins) ---
+QGI: runtime_s=1.288  final_index_MAE=0.005932  final_cumulative_reward=73634.199700
+DGN: runtime_s=55.652  final_index_MAE=0.009082  final_cumulative_reward=73633.634500
+MC-QGI (B=1): runtime_s=4.714  final_index_MAE=0.001640  final_cumulative_reward=73733.318300
+
+--- Restless track (target Whittle) ---
+QWI: runtime_s=7.454  final_index_MAE=1.261661  final_cumulative_reward=79717.765200
+QWINN: runtime_s=93.277  final_index_MAE=0.128507  final_cumulative_reward=79583.941100
+MC-QWI (B=1): runtime_s=13.759  final_index_MAE=0.542591  final_cumulative_reward=77404.664800

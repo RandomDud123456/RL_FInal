@@ -1,0 +1,7 @@
+K,N,track,environment,algorithm,truth_index_MAE,runtime_sec,initial_index_MAE,final_index_MAE,final_cumulative_reward,skipped
+5,5,rested,restless=False,QGI,Gittins_G_star,1.287907,0.10065339,0.00593217,73634.19969999,false
+5,5,rested,restless=False,DGN,Gittins_G_star,55.652379,1.83045529,0.00908236,73633.63449999,false
+5,5,rested,restless=False,MC-QGI (B=1),Gittins_G_star,4.714034,1.02833720,0.00163972,73733.31829999,false
+5,5,restless,restless=True,QWI,Whittle_lambda_star,7.453826,1.76147230,1.26166082,79717.76520000,false
+5,5,restless,restless=True,QWINN,Whittle_lambda_star,93.276511,1.60623847,0.12850711,79583.94110000,false
+5,5,restless,restless=True,MC-QWI (B=1),Whittle_lambda_star,13.758582,1.41551854,0.54259056,77404.66479999,false
