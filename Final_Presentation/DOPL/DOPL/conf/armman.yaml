@@ -1,0 +1,31 @@
+defaults:
+  - override hydra/launcher: joblib
+  - _self_
+  
+
+num_seeds : 3
+lp_solver: cbc # License-free PuLP/CBC backend used by the LP routines.
+wandb_mode: disabled # Override with online/offline to enable W&B logging.
+reward_normalized: True # Set this to true if your env R is normalized between 0 and 1
+K : 20000
+H : 5
+epsilon: 0.1
+eps : 1e-5
+step_size_params:
+  const_step : 0.01
+  C : 1
+  C_dash : 1
+  D : 10
+  D_dash : 800
+algos : ["random", "mle_lp", "dopl", "oracle"]
+plotting:
+  window_size: 100
+  algo_colors: ["red","orange", "blue", "purple","green", "black"]
+env_config:
+  noise_std: 0.0
+  arm: "armman"
+  num_types: 10
+  num_arms_per_type: 2
+  arm_constraint: 10
+exp:
+  name: armman
